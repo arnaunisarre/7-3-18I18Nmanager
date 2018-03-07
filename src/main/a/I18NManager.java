@@ -29,7 +29,15 @@ public class I18NManager {
             rb = ResourceBundle.getBundle("edu.pc.eetac.dsa.patrons.i18n."+language);
             data.put(language,rb);
         }
-        return rb.get
+        return rb.getString(key);
+    }
+
+
+    public static void main(String[] args){
+        String value= I18NManager.getInstance().getText("ca","t1");
+        value = I18NManager.getInstance().getText("ca","t2");
+        value = I18NManager.getInstance().getText("ca","t2");
+
     }
 
 
